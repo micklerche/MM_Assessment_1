@@ -9,29 +9,54 @@
 #import "Ass1HomeViewController.h"
 
 @interface Ass1HomeViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *valueOne;
+@property (strong, nonatomic) IBOutlet UITextField *valueTwo;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *webButton;
 
 @end
 
 @implementation Ass1HomeViewController
 
+#pragma view items
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+
+
+
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma IBActions items
+- (IBAction)onCalculateButtonPressed:(id)sender {
+    if (![self.valueOne.text isEqualToString:@""] && ![self.valueTwo.text isEqualToString:@""]) {
+        int calculatedValue = [self.valueOne.text intValue] * [self.valueTwo.text intValue];
+        self.navigationItem.title = [NSString stringWithFormat:@"%i", calculatedValue];
+        self.webButton.enabled = (calculatedValue % 5 == 0 ? YES : NO);
+        [self.view endEditing:YES];
+    } else {
+        self.navigationItem.title = @"Value Missing";
+        self.webButton.enabled = NO;
+    }
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma segue items
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+
+
+
+
 }
-*/
+
+
+
+
+
+
+
+
+
 
 @end
