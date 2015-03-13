@@ -7,11 +7,14 @@
 //
 
 #import "Ass1HomeViewController.h"
+#import "Ass1WebViewController.h"
 
 @interface Ass1HomeViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *valueOne;
 @property (strong, nonatomic) IBOutlet UITextField *valueTwo;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *webButton;
+
+@property NSString *calculatedValueString;
 
 @end
 
@@ -20,18 +23,14 @@
 #pragma view items
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-
-
-
-
 }
 
 #pragma IBActions items
 - (IBAction)onCalculateButtonPressed:(id)sender {
     if (![self.valueOne.text isEqualToString:@""] && ![self.valueTwo.text isEqualToString:@""]) {
         int calculatedValue = [self.valueOne.text intValue] * [self.valueTwo.text intValue];
-        self.navigationItem.title = [NSString stringWithFormat:@"%i", calculatedValue];
+        self.calculatedValueString = [NSString stringWithFormat:@"%i", calculatedValue];
+        self.navigationItem.title = self.calculatedValueString;
         self.webButton.enabled = (calculatedValue % 5 == 0 ? YES : NO);
         [self.view endEditing:YES];
     } else {
@@ -43,11 +42,12 @@
 
 #pragma segue items
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    Ass1WebViewController *vc = segue.destinationViewController;
+    vc.calculatedValue = self.calculatedValueString;
 
-
-
-
-
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]initWithTitle:NSLocalizedString(@"Back", returnbuttontitle)
+                                                                  style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
 }
 
 

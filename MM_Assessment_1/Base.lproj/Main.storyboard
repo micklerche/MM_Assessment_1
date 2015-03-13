@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1222.5" y="389"/>
         </scene>
-        <!--View Controller-->
+        <!--Ass1 Web View Controller-->
         <scene sceneID="CUc-Hv-kwe">
             <objects>
-                <viewController id="t7w-Ii-CtD" sceneMemberID="viewController">
+                <viewController id="t7w-Ii-CtD" customClass="Ass1WebViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gxq-nV-hYs"/>
                         <viewControllerLayoutGuide type="bottom" id="lLS-1c-BdW"/>
@@ -183,29 +183,76 @@
                     <view key="view" contentMode="scaleToFill" id="aqY-ir-9kg">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Web Coming Soon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ruk-2h-Lcj">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="119" y="351" width="163" height="21"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mSv-dA-wqZ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PDW-2z-75X">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="8Zy-ng-L7i"/>
+                                    <constraint firstAttribute="height" constant="37" id="ULi-Ub-q03"/>
+                                </constraints>
+                                <color key="color" red="1" green="0.36715429090000001" blue="0.72036338379999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Zy-ng-L7i"/>
+                                        <exclude reference="ULi-Ub-q03"/>
+                                    </mask>
                                 </variation>
-                            </label>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="8Zy-ng-L7i"/>
+                                        <include reference="ULi-Ub-q03"/>
+                                    </mask>
+                                </variation>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mSv-dA-wqZ" firstAttribute="leading" secondItem="aqY-ir-9kg" secondAttribute="leading" id="DsQ-YP-Ssn"/>
+                            <constraint firstItem="lLS-1c-BdW" firstAttribute="top" secondItem="mSv-dA-wqZ" secondAttribute="bottom" id="OS9-Jx-q9C"/>
+                            <constraint firstAttribute="centerX" secondItem="PDW-2z-75X" secondAttribute="centerX" id="WBw-YK-gAf"/>
+                            <constraint firstItem="mSv-dA-wqZ" firstAttribute="top" secondItem="aqY-ir-9kg" secondAttribute="top" id="Y0d-Rt-Isd">
+                                <variation key="widthClass=compact" constant="64"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="mSv-dA-wqZ" secondAttribute="trailing" id="Zbs-qL-fb2"/>
+                            <constraint firstAttribute="centerY" secondItem="PDW-2z-75X" secondAttribute="centerY" id="e6l-v6-QQl"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Ruk-2h-Lcj"/>
+                                <exclude reference="mSv-dA-wqZ"/>
+                                <exclude reference="PDW-2z-75X"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="DsQ-YP-Ssn"/>
+                                <exclude reference="Y0d-Rt-Isd"/>
+                                <exclude reference="Zbs-qL-fb2"/>
+                                <exclude reference="WBw-YK-gAf"/>
+                                <exclude reference="e6l-v6-QQl"/>
+                                <exclude reference="OS9-Jx-q9C"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="Ruk-2h-Lcj"/>
+                                <include reference="mSv-dA-wqZ"/>
+                                <include reference="PDW-2z-75X"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="DsQ-YP-Ssn"/>
+                                <include reference="Y0d-Rt-Isd"/>
+                                <include reference="Zbs-qL-fb2"/>
+                                <include reference="WBw-YK-gAf"/>
+                                <include reference="e6l-v6-QQl"/>
+                                <include reference="OS9-Jx-q9C"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="uIS-D3-7v2"/>
+                    <connections>
+                        <outlet property="activityView" destination="PDW-2z-75X" id="lWc-9G-ksu"/>
+                        <outlet property="webView" destination="mSv-dA-wqZ" id="0L8-qZ-LdJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bWl-hu-WUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

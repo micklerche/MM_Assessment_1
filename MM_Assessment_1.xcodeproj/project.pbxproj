@@ -14,6 +14,8 @@
 		6BB40F781AB32975006360B2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BB40F761AB32975006360B2 /* LaunchScreen.xib */; };
 		6BB40F841AB32975006360B2 /* MM_Assessment_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB40F831AB32975006360B2 /* MM_Assessment_1Tests.m */; };
 		6BB40F8F1AB329BC006360B2 /* Ass1HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB40F8E1AB329BC006360B2 /* Ass1HomeViewController.m */; };
+		6BB40F931AB338E3006360B2 /* Ass1WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB40F921AB338E3006360B2 /* Ass1WebViewController.m */; };
+		6BB40F951AB34FED006360B2 /* MobileMakersDuck.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BB40F941AB34FED006360B2 /* MobileMakersDuck.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		6BB40F831AB32975006360B2 /* MM_Assessment_1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MM_Assessment_1Tests.m; sourceTree = "<group>"; };
 		6BB40F8D1AB329BC006360B2 /* Ass1HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ass1HomeViewController.h; sourceTree = "<group>"; };
 		6BB40F8E1AB329BC006360B2 /* Ass1HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ass1HomeViewController.m; sourceTree = "<group>"; };
+		6BB40F911AB338E3006360B2 /* Ass1WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ass1WebViewController.h; sourceTree = "<group>"; };
+		6BB40F921AB338E3006360B2 /* Ass1WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ass1WebViewController.m; sourceTree = "<group>"; };
+		6BB40F941AB34FED006360B2 /* MobileMakersDuck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MobileMakersDuck.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,7 @@
 		6BB40F671AB32975006360B2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6BB40F941AB34FED006360B2 /* MobileMakersDuck.png */,
 				6BB40F681AB32975006360B2 /* Info.plist */,
 				6BB40F691AB32975006360B2 /* main.m */,
 			);
@@ -123,6 +129,8 @@
 				6BB40F711AB32975006360B2 /* Main.storyboard */,
 				6BB40F8D1AB329BC006360B2 /* Ass1HomeViewController.h */,
 				6BB40F8E1AB329BC006360B2 /* Ass1HomeViewController.m */,
+				6BB40F911AB338E3006360B2 /* Ass1WebViewController.h */,
+				6BB40F921AB338E3006360B2 /* Ass1WebViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -208,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BB40F731AB32975006360B2 /* Main.storyboard in Resources */,
+				6BB40F951AB34FED006360B2 /* MobileMakersDuck.png in Resources */,
 				6BB40F781AB32975006360B2 /* LaunchScreen.xib in Resources */,
 				6BB40F751AB32975006360B2 /* Images.xcassets in Resources */,
 			);
@@ -230,6 +239,7 @@
 				6BB40F6D1AB32975006360B2 /* AppDelegate.m in Sources */,
 				6BB40F6A1AB32975006360B2 /* main.m in Sources */,
 				6BB40F8F1AB329BC006360B2 /* Ass1HomeViewController.m in Sources */,
+				6BB40F931AB338E3006360B2 /* Ass1WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
